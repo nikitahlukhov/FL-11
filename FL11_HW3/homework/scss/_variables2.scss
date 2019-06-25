@@ -1,0 +1,15 @@
+$underlineColor: rgb(255,78,51);
+$greyColor: rgb(255,251,250);
+$background: url("../img/m-h-night.jpg");
+$buttonColor: rgb(227,172,0);
+$gradient: linear-gradient(to right, #D99C09, #953150);
+$white: rgb(255,255,255);
+$backgr: rgb(33,35,46);
+$foot: rgb(59,63,80);
+$fonts: (
+  source: ('Source Sans Pro', sans-serif),
+   hind: ('Hind', sans-serif),
+    fresca: ('Fresca', sans-serif),
+    
+);
+$day: map-get($fonts, fresca);

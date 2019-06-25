@@ -1,0 +1,16 @@
+$underlineColor: rgb(20,160,199);
+$greyColor: rgb(44,47,60);
+$background: url("../img/m-h-day.jpg");
+$buttonColor: rgb(105,153,0);
+$gradient: linear-gradient(to right, #639314, #3260C5);
+$white: rgb(178,184,185);
+$backgr:rgb(255,255,255);
+$foot: rgb(33,35,46);
+$fonts: (
+  source:   ('Source Sans Pro', sans-serif),
+   hind: ('Hind', sans-serif),
+    fresca: ('Fresca', sans-serif),
+    
+);
+
+$day: map-get($fonts, source);
