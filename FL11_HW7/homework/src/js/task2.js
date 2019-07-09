@@ -4,12 +4,22 @@ let totalPrize = 0;
 let prize = 100;
 let baseRand = 9;
 let randomNum = Math.floor(Math.random() * baseRand);
+let number0 = 0;
+let number1 = 1;
+let number2 = 2;
+let number3 = 3;
+let number4 = 4;
+let number8 = 8;
+let number9 = 9;
+let number100 = 100;
+
 
 if (!game) {
   alert('You did not become a billionaire, but can.');
 }
 
 while (game) {
+  console.log(randomNum)
   let number = Number(
     prompt(`Choose a roulette pocket number from 0 to ${baseRand - 1}
 Attempts left: ${i}
@@ -24,35 +34,35 @@ Possible prize on current attempt: ${prize}$`)
       alert(`Thank you for your participation. Your prize is: ${totalPrize}$`);
       let playAgain = confirm('Do you want to play again?');
       if (playAgain) {
-        i = 3;
-        totalPrize = 0;
-        prize = 100;
+        i = number3;
+        totalPrize = number0;
+        prize = number100;
         randomNum = Math.floor(Math.random() * baseRand);
         game = true;
       }
     } else {
-      baseRand += 4;
-      if (i === 3) {
-        prize *= 2;
-      } else if (i === 2) {
-        prize *= 4;
-      } else if (i === 1) {
-        prize *= 8;
+      baseRand += number4;
+      if (i === number3) {
+        prize *= number2;
+      } else if (i === number2) {
+        prize *= number4;
+      } else if (i === number1) {
+        prize *= number8;
       }
-      i = 3;
+      i = number3;
       randomNum = Math.floor(Math.random() * baseRand);
       game = true;
     }
   } else if (number !== randomNum) {
     i--;
-    prize -= prize / 2;
-    if (i === 0) {
+    prize -= prize / number2;
+    if (i === number0) {
       alert(`Thank you for your participation. Your prize is: ${totalPrize}$`);
       confirm('Do you want to play again?');
-      baseRand = 9;
-      i = 3;
-      totalPrize = 0;
-      prize = 100;
+      baseRand = number9;
+      i = number3;
+      totalPrize = number0;
+      prize = number100;
       randomNum = Math.floor(Math.random() * baseRand);
       game = true;
     }
