@@ -17,7 +17,7 @@ Total prize: ${totalPrize}$
 Possible prize on current attempt: ${prize}$`)
   );
   if (number === randomNum) {
-    alert(`Congratulation, you won!   Your prize is: ${prize} $`);
+    alert(`Congratulation, you won! Your prize is: ${prize} $`);
     totalPrize += prize;
     let oneMore = confirm('Do you want to continue?');
     if (!oneMore) {
