@@ -77,7 +77,7 @@ let showFormattedDate = (date) => {
 showFormattedDate(new Date('2019-01-27T01:10:00'))
 
 let canConvertToDate = (date) => {
-  return date instanceof Date && !isNaN(date);
+  return !isNaN(Date.parse(date));
 }
 
 canConvertToDate('2016-13-18T00:00:00')
@@ -94,10 +94,10 @@ let daysBetween = (date, date2) => {
 daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'))
 
 let getAmountOfAdultPeople = persons => {
-  let divider = 6574;
+  let adult = 6574;
   let amount = 0;
   filterArray(persons, function (el) {
-    if (daysBetween(new Date(el.birthday), new Date('2019-07-16T00:00:00')) > divider) {
+    if (daysBetween(new Date(el.birthday), new Date('2019-07-16T00:00:00')) > adult) {
       amount += 1
     }
   })
