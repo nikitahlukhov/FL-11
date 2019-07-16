@@ -69,14 +69,14 @@ filterArray([numTwo, numFive, numEight], function (el) {
   return el > numThree;
 })
 
-let showFormattedDate = (date) => {
+let showFormattedDate = date => {
   let options = { year: 'numeric', month: 'short', day: 'numeric' };
   return `Date: ${date.toLocaleDateString('en-US', options)}`.replace(',', '');
 }
 
 showFormattedDate(new Date('2019-01-27T01:10:00'))
 
-let canConvertToDate = (date) => {
+let canConvertToDate = date => {
   return !isNaN(Date.parse(date));
 }
 
