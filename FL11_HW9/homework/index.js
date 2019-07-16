@@ -1,3 +1,9 @@
+let numTwo = 2;
+let numThree = 3;
+let numFive = 5;
+let numEight = 8;
+
+
 let getNumbers = string => {
   let arr = string.split('')
   let arr2 = [];
@@ -24,7 +30,7 @@ function findTypes() {
   return obj;
 }
 
-findTypes(null, 5, 'hello')
+findTypes(null, numFive, 'hello')
 
 let executeforEach = (arr, callback) => {
   for (let i = 0; i < arr.length; i++) {
@@ -32,7 +38,7 @@ let executeforEach = (arr, callback) => {
   }
 }
 
-executeforEach([1, 2, 3], function (el) {
+executeforEach([1, numTwo, numThree], function (el) {
   console.log(el)
 });
 
@@ -44,8 +50,8 @@ let mapArray = (arr, callback) => {
   return newArr;
 }
 
-mapArray([2, 5, 8], function (el) {
-  return el + 3;
+mapArray([numTwo, numFive, numEight], function (el) {
+  return el + numThree;
 })
 
 let filterArray = (arr, callback) => {
@@ -59,8 +65,8 @@ let filterArray = (arr, callback) => {
 
 }
 
-filterArray([2, 5, 8], function (el) {
-  return el > 3;
+filterArray([numTwo, numFive, numEight], function (el) {
+  return el > numThree;
 })
 
 let showFormattedDate = (date) => {
@@ -88,9 +94,10 @@ let daysBetween = (date, date2) => {
 daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'))
 
 let getAmountOfAdultPeople = persons => {
+  let divider = 6574;
   let amount = 0;
   filterArray(persons, function (el) {
-    if (daysBetween(new Date(el.birthday), new Date('2019-07-16T00:00:00')) > 6574) {
+    if (daysBetween(new Date(el.birthday), new Date('2019-07-16T00:00:00')) > divider) {
       amount += 1
     }
   })
