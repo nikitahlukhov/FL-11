@@ -1,9 +1,3 @@
-let numTwo = 2;
-let numThree = 3;
-let numFive = 5;
-let numEight = 8;
-
-
 let getNumbers = string => {
   let arr = string.split('')
   let arr2 = [];
@@ -14,8 +8,6 @@ let getNumbers = string => {
   }
   return arr2;
 }
-
-getNumbers('n1um3ber95')
 
 function findTypes() {
   let obj = {};
@@ -30,17 +22,11 @@ function findTypes() {
   return obj;
 }
 
-findTypes(null, numFive, 'hello')
-
 let executeforEach = (arr, callback) => {
   for (let i = 0; i < arr.length; i++) {
     callback(arr[i]);
   }
 }
-
-executeforEach([1, numTwo, numThree], function (el) {
-  console.log(el)
-});
 
 let mapArray = (arr, callback) => {
   let newArr = [];
@@ -49,10 +35,6 @@ let mapArray = (arr, callback) => {
   })
   return newArr;
 }
-
-mapArray([numTwo, numFive, numEight], function (el) {
-  return el + numThree;
-})
 
 let filterArray = (arr, callback) => {
   let newArr = [];
@@ -65,23 +47,14 @@ let filterArray = (arr, callback) => {
 
 }
 
-filterArray([numTwo, numFive, numEight], function (el) {
-  return el > numThree;
-})
-
 let showFormattedDate = date => {
   let options = { year: 'numeric', month: 'short', day: 'numeric' };
   return `Date: ${date.toLocaleDateString('en-US', options)}`.replace(',', '');
 }
 
-showFormattedDate(new Date('2019-01-27T01:10:00'))
-
 let canConvertToDate = date => {
   return !isNaN(Date.parse(date));
 }
-
-canConvertToDate('2016-13-18T00:00:00')
-canConvertToDate('2016-03-18T00:00:00')
 
 let daysBetween = (date, date2) => {
   let a = date.getTime()
@@ -90,8 +63,6 @@ let daysBetween = (date, date2) => {
   let days = a > b ? (a - b) / divider : (b - a) / divider;
   return days;
 }
-
-daysBetween(new Date('2016-03-18T00:00:00'), new Date('2016-04-19T00:00:00'))
 
 let getAmountOfAdultPeople = persons => {
   let adult = 6574;
@@ -105,43 +76,6 @@ let getAmountOfAdultPeople = persons => {
 
 }
 
-let data = [
-  {
-    '_id': '5b5e3168c6bf40f2c1235cd6',
-    'index': 0,
-    'birthday': '2016-03-18T00:00:00',
-    'eyeColor': 'green',
-    'name': 'Stein',
-    'favoriteFruit': 'apple'
-  },
-  {
-    '_id': '5b5e3168e328c0d72e4f27d8',
-    'index': 1,
-    'birthday': '1991-02-11T00:00:00',
-    'eyeColor': 'blue',
-    'name': 'Cortez',
-    'favoriteFruit': 'strawberry'
-  },
-  {
-    '_id': '5b5e3168cc79132b631c666a',
-    'index': 2,
-    'birthday': '1984-04-17T00:00:00',
-    'eyeColor': 'blue',
-    'name': 'Suzette',
-    'favoriteFruit': 'apple'
-  },
-  {
-    '_id': '5b5e31682093adcc6cd0dde5',
-    'index': 3,
-    'birthday': '1994-04-17T00:00:00',
-    'eyeColor': 'green',
-    'name': 'George',
-    'favoriteFruit': 'banana'
-  }
-]
-
-getAmountOfAdultPeople(data)
-
 let keys = obj => {
   let arr = []
   for (let prop in obj) {
@@ -152,8 +86,6 @@ let keys = obj => {
   return arr;
 }
 
-keys({ keyOne: 1, keyTwo: 2, keyThree: 3 })
-
 let values = obj => {
   let arr = []
   for (let prop in obj) {
@@ -163,8 +95,3 @@ let values = obj => {
   }
   return arr;
 }
-
-
-values({ keyOne: 1, keyTwo: 2, keyThree: 3 })
-
-
