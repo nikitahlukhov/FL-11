@@ -1,0 +1,71 @@
+#root {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
+}
+
+form {
+  display: flex;
+}
+
+form input {
+  width: 95%;
+  height: 40px;
+  border-radius: 5px;
+  text-indent: 5px;
+  border: 1px solid rgb(200, 208, 216);
+}
+
+form {
+  color: rgb(200, 208, 216);
+}
+
+hr {
+  width: 100%;
+}
+
+ul {
+  list-style: none;
+  text-align: left;
+  color: rgb(52, 176, 254);
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li div {
+  display: flex;
+  align-items: center;
+}
+
+li input {
+  width: 20px;
+  height: 20px;
+}
+
+#pen {
+  margin-left: 5px;
+}
+
+h1,
+h6 {
+  color: rgb(52, 176, 254);
+  margin: 0;
+}
+
+h6 {
+  visibility: hidden;
+}
+
+#edit {
+  width: 100%;
+}
+
+#save {
+  color: rgb(52, 176, 254);
+}
